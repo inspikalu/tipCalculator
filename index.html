@@ -1,44 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1>SPLI<br />TTER</h1>
 
-  Bill
+    <section class="card">
+      <section class="card__container-right">
+        <section class="bills">
+          <label for="bills"
+            >Bill <span class="error bills-error"></span
+          ></label>
+          <div class="billsDiv">
+            <span><img src="/images/icon-dollar.svg" alt="Dollar SVG" /></span>
+            <input type="text" id="bills" placeholder="0" />
+          </div>
+        </section>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+        <section class="selectTip">
+          <h2>Select Tip %</h2>
 
-  Number of People
+          <button class='tipPercentButton' data-value="5">5%</button>
+          <button class='tipPercentButton' data-value="10">10%</button>
+          <button class='tipPercentButton' data-value="15">15%</button>
+          <button class='tipPercentButton' data-value="25">25%</button>
+          <button class='tipPercentButton' data-value="50">50%</button>
+          <input type="text" id="custom" placeholder="Custom" />
+        </section>
+        <section class="noOfPeopleContainer">
+          <label for="noOfPeople"
+            >Number of people
+            <span class="error noOfPeople-error">error</span></label
+          >
+          <div>
+            <span><img src="/images/icon-person.svg" alt="Person SVG" /></span>
+            <input type="text" id="noOfPeople" placeholder="0" />
+          </div>
+        </section>
+      </section>
 
-  Tip Amount
-  / person
+      <section class="card__container-left">
+        <section class="tipAmount">
+          <h2>Tip Amount</h2>
+          <span>/ person</span>
+          <div>$<span class="amount">0.00</span></div>
+        </section>
 
-  Total
-  / person
+        <section class="total">
+          <h2>Total</h2>
+          <span>/ person</span>
+          <div>$<span class="total">0.00</span></div>
+        </section>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <button class="reset">RESET</button>
+      </section>
+    </section>
+
+    <section class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Inspikalu</a>.
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>

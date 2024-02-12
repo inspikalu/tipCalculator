@@ -1,0 +1,47 @@
+$strong-cyan: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+* {
+  padding: 0;
+  margin: 0;
+  // font-family: "Space Mono", sans-serif;
+  font-family: "Space Mono", sans-serif !important;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: clamp(100vh, 110vh, 900px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Space Mono", sans-serif !important;
+  background-color: $light-grayish-cyan;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+button {
+  cursor: pointer;
+}
+
+@mixin media-sm {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media (min-width: 700px) {
+    @content;
+  }
+}

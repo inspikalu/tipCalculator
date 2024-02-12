@@ -1,0 +1,174 @@
+@import "config";
+
+%colored-input {
+  background: transparent;
+  font: inherit;
+  border: 0px solid transparent;
+  text-align: right;
+  background-color: $light-grayish-cyan;
+}
+
+h1 {
+  text-align: center;
+  color: $very-dark-cyan;
+  line-height: 0.8;
+}
+label {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .error {
+    color: red !important;
+  }
+}
+.card {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+  background-color: $white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.card__container-left {
+  background-color: $very-dark-cyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  padding: 15px 1.5rem;
+  gap: 1rem;
+  border-radius: 5px;
+
+  button {
+    margin-block-start: auto;
+    font: inherit;
+    min-width: 80%;
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+    text-transform: capitalize !important;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header amount" "details amount";
+    align-items: center;
+    gap: 10px;
+    justify-content: start;
+    h2 {
+      grid-area: header;
+      font-size: smaller;
+      color: $white;
+    }
+    & > span {
+      grid-area: details;
+      color: $grayish-cyan;
+      font-size: smaller;
+    }
+    & > div {
+      grid-area: amount;
+      justify-self: end;
+      font-size: larger;
+      font-weight: 600;
+      color: $strong-cyan;
+      span {
+        font-size: larger;
+      }
+    }
+  }
+}
+
+.card__container-right {
+  width: 100%;
+  label,
+  h2 {
+    color: $dark-grayish-cyan;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  section.bills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    div {
+      background-color: $light-grayish-cyan;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-radius: 4px;
+
+      &:focus,
+      &:focus-visible,
+      input:focus & {
+        outline: 2px solid $light-grayish-cyan;
+      }
+
+      input {
+        @extend %colored-input;
+        background-color: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  section.selectTip {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-block: 1rem;
+    gap: 10px;
+
+    h2 {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+    button {
+      background-color: $very-dark-cyan;
+      font: inherit;
+      padding: 8px;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $strong-cyan;
+      }
+    }
+
+    input {
+      @extend %colored-input;
+      padding-inline: 10px;
+      text-indent: 10px;
+      box-sizing: border-box;
+    }
+  }
+
+  section.noOfPeopleContainer {
+    @extend section.bills;
+  }
+}
+
+@include media-sm {
+  .card {
+    width: 60%;
+  }
+}
+
+@include media-md {
+  .card {
+    width: 70%;
+    grid-template-columns: 1fr 1fr !important;
+    padding: 10px;
+  }
+}

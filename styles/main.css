@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Space Mono", sans-serif !important;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: clamp(100vh, 110vh, 900px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Space Mono", sans-serif !important;
+  background-color: #c5e4e7;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+button {
+  cursor: pointer;
+}
+
+.card__container-right section.bills div input, .card__container-right section.noOfPeopleContainer div input, .card__container-right section.selectTip input {
+  background: transparent;
+  font: inherit;
+  border: 0px solid transparent;
+  text-align: right;
+  background-color: #c5e4e7;
+}
+
+h1 {
+  text-align: center;
+  color: #00494d;
+  line-height: 0.8;
+}
+
+label {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+label .error {
+  color: red !important;
+}
+
+.card {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.card__container-left {
+  background-color: #00494d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  padding: 15px 1.5rem;
+  gap: 1rem;
+  border-radius: 5px;
+}
+
+.card__container-left button {
+  margin-block-start: auto;
+  font: inherit;
+  min-width: 80%;
+  background-color: #26c0ab;
+  color: #00494d;
+  text-transform: capitalize !important;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.card__container-left section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "header amount" "details amount";
+  align-items: center;
+  gap: 10px;
+  justify-content: start;
+}
+
+.card__container-left section h2 {
+  grid-area: header;
+  font-size: smaller;
+  color: white;
+}
+
+.card__container-left section > span {
+  grid-area: details;
+  color: #7f9c9f;
+  font-size: smaller;
+}
+
+.card__container-left section > div {
+  grid-area: amount;
+  justify-self: end;
+  font-size: larger;
+  font-weight: 600;
+  color: #26c0ab;
+}
+
+.card__container-left section > div span {
+  font-size: larger;
+}
+
+.card__container-right {
+  width: 100%;
+}
+
+.card__container-right label,
+.card__container-right h2 {
+  color: #5e7a7d;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.card__container-right section.bills, .card__container-right section.noOfPeopleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card__container-right section.bills div, .card__container-right section.noOfPeopleContainer div {
+  background-color: #c5e4e7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.card__container-right section.bills div:focus, .card__container-right section.noOfPeopleContainer div:focus, .card__container-right section.bills div:focus-visible, .card__container-right section.noOfPeopleContainer div:focus-visible,
+input:focus .card__container-right section.bills div,
+input:focus .card__container-right section.noOfPeopleContainer div {
+  outline: 2px solid #c5e4e7;
+}
+
+.card__container-right section.bills div input, .card__container-right section.noOfPeopleContainer div input {
+  background-color: none;
+}
+
+.card__container-right section.bills div input:focus, .card__container-right section.noOfPeopleContainer div input:focus {
+  outline: none;
+}
+
+.card__container-right section.selectTip {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-block: 1rem;
+  gap: 10px;
+}
+
+.card__container-right section.selectTip h2 {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.card__container-right section.selectTip button {
+  background-color: #00494d;
+  font: inherit;
+  padding: 8px;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card__container-right section.selectTip button:hover {
+  background-color: #26c0ab;
+}
+
+.card__container-right section.selectTip input {
+  padding-inline: 10px;
+  text-indent: 10px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  .card {
+    width: 60%;
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    width: 70%;
+    grid-template-columns: 1fr 1fr !important;
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
